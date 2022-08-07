@@ -1,0 +1,63 @@
+// Funções
+// Parametro
+function meow(gato: String) {
+    console.log(gato)
+}
+meow("Miau miaaaaaaaau caralho")
+
+
+
+// Funções de retorno
+function greeting(name: string): string {
+    return `Olá ${name} :)`
+}
+console.log(greeting('Danilo'))
+
+
+
+// Funções anônimas
+setTimeout(function(){
+    const minimumSalary: number = 1212.00
+    console.log("Salário mínimo 2022: R$ " + minimumSalary)
+
+}, 2000)
+
+
+
+// Tipos de objetos
+function passCoordinates(coord: {x: number, y: number}) {
+    console.log("X coordinates: " + coord.x)
+    console.log("Y coordinates: " + coord.y)
+}
+
+const coordenadas = {x: 32.987, y: 44.588}
+passCoordinates(coordenadas)
+
+
+
+// Propriedades opcionais (variavel -> ? =  variavel?)
+function mostrarNumeros(a: number, b: number, c?: number) {
+    console.log('A: ' + a)
+    console.log('B: ' + b)
+
+    if(c){
+        console.log('C: ' + c)
+    }
+}
+
+mostrarNumeros(3, 2, 1)
+mostrarNumeros(99, 98)
+
+
+
+// Validação de parâmetro opcional
+function advancedGreeting(firstName: string, lastName?: string){
+    if(lastName != undefined){
+        return `Olá, ${firstName} ${lastName}, tudo bem? :)`
+    }
+
+    return `Olá, ${firstName}, tudo bem? :)`
+}
+
+console.log(advancedGreeting('Danilo', 'Santos'))
+console.log(advancedGreeting('Danilo'))
