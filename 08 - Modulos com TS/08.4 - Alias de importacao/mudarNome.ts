@@ -1,0 +1,1 @@
+export const mudeiDeNome = "Mudei de nome"
